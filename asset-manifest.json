@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SW-Random-Character-Generator/static/css/main.7fd2d14b.css",
+    "main.js": "/SW-Random-Character-Generator/static/js/main.5ef8f914.js",
+    "static/js/787.28cb0dcd.chunk.js": "/SW-Random-Character-Generator/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/SW-Random-Character-Generator/index.html",
+    "main.7fd2d14b.css.map": "/SW-Random-Character-Generator/static/css/main.7fd2d14b.css.map",
+    "main.5ef8f914.js.map": "/SW-Random-Character-Generator/static/js/main.5ef8f914.js.map",
+    "787.28cb0dcd.chunk.js.map": "/SW-Random-Character-Generator/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7fd2d14b.css",
+    "static/js/main.5ef8f914.js"
+  ]
+}
