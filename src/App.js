@@ -1,13 +1,6 @@
 import './App.css';
 import React from 'react';
 
-class FilmList extends React.Component {
-  render(){
-    return(
-      <li><a href={this.props.link} >{this.props.link}</a></li>
-    )
-  }
-}
 
 class StarWars extends React.Component {
 
@@ -23,8 +16,8 @@ class StarWars extends React.Component {
   }
 
   getNewCharacter(){
-    const randChar = Math.round(Math.random()*82)
-    const url = `https://swapi.dev/api/people/${randChar}/`
+    const randChar = Math.round(Math.random()*88)
+    const url = `https://raw.githubusercontent.com/akabab/starwars-api/master/api/id/${randChar}.json`
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -33,28 +26,23 @@ class StarWars extends React.Component {
           name: data.name,
           height: data.height,
           homeworld: data.homeworld,
-          films: data.films
+          films: data.affiliations,
+          image: data.image
         })
       })  
   }
 
   render() {
 
-    const movies = this.state.films.map((url,i) => {
-      return <FilmList key={i} link={url}/>
-    })
-
     return (
       <div>
         {
           this.state.hasCharacter &&
             <div>
+              <img src={this.state.image} className="charPhoto"/>
               <h1>{this.state.name}</h1>
-              <p>{this.state.height} cm</p>
-              <p><a className="homelink" href = {this.state.homeworld}>Homeworld</a></p>
-              <ul>
-                {movies}
-              </ul>
+              <p>Height: {this.state.height} m</p>
+              <p>Homeworld: {this.state.homeworld}</p>
             </div>
         }
         <button 
